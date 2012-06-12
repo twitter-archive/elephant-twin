@@ -1,0 +1,15 @@
+*.iml
+*.ipr
+*.iws
+*.tmproj
+*~
+.DS_Store
+.classpath
+.generators
+.idea
+.log
+.manager
+.project
+.rakeTasks
+.settings
+target

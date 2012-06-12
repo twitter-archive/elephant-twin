@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+        <groupId>com.twitter.elephanttwin</groupId>
+        <artifactId>elephanttwin-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+  </parent>
+  
+  <artifactId>elephanttwin-lucene</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>elephanttwin-lucene</name>
+  <description>Utilities for creating Elephant-Twin indexes using Lucene</description>
+  
+  <url>http://maven.apache.org</url>
+  <licenses>
+    <license>
+      <name>Apache Public License 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+    </license>
+  </licenses>
+  
+  <dependencies>
+    <!-- testing -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- lucene -->
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>r1211247</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-modules</artifactId>
+      <version>r1211247</version>
+    </dependency>
+
+    <!-- core -->
+    <dependency>
+        <groupId>com.twitter.elephanttwin</groupId>
+        <artifactId>elephanttwin-core</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+</project>

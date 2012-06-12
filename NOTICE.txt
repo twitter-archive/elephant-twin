@@ -1,0 +1,6 @@
+This software depends on a number of open-source projects available under
+the Apache licencse, as well as their respective dependencies.
+
+Additionaly, the sample Excite dataset comes from Apache Pig, and has 
+been slightly modified (its contents has been randomly shuffled). It is also
+distributed under the Apache license.
