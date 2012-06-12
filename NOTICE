@@ -1,3 +1,6 @@
+Elephant Twin is a framework for creating indexes in Hadoop.
+Copyright 2012 Twitter, Inc.
+
 This software depends on a number of open-source projects available under
 the Apache licencse, as well as their respective dependencies.
 
