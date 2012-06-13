@@ -4,7 +4,7 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -255,6 +255,13 @@ FileInputFormat<K, V> {
         null, false);
   }
 
+  public static void setSearchOptions(Job job, String inputformatClass,
+      String valueClass, String indexDir, BinaryExpression filter)
+          throws IOException {
+    setOptions(job, inputformatClass, valueClass, indexDir, filter.toSerializedString(),
+        null, false);
+  }
+
   /**
    * Indexing jobs call this function to set up indexing job related parameters.
    * @param job
@@ -337,7 +344,8 @@ FileInputFormat<K, V> {
         + file.toUri().getRawPath() + "/"
         + BlockIndexedFileInputFormat.INDEXMETAFILENAME);
     if (!fs.exists(indexFilePath)) {
-      LOG.info("no index file found for input file:" + file);
+      LOG.info("no index file found for input file:" + file +
+          " at location " + indexFilePath);
       return false;
     }
     FSDataInputStream in = fs.open(indexFilePath);
