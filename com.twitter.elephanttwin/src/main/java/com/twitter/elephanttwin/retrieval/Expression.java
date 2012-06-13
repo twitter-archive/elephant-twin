@@ -4,7 +4,7 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -113,6 +113,15 @@ public abstract class Expression implements Serializable {
      */
     public Expression getRhs() {
       return rhs;
+    }
+
+    /**
+     * Convert a filter to its serialized form
+     * @return
+     * @throws IOException
+     */
+    public  String toSerializedString() throws IOException {
+      return ObjectSerializer.serialize(this);
     }
 
     @Override
@@ -250,6 +259,7 @@ public abstract class Expression implements Serializable {
     else
       return new BinaryExpression(newLhs, newRhs, OpType.OP_AND);
   }
+
   /**
    * @param filterString
    * @return return deserialized filter condition.
