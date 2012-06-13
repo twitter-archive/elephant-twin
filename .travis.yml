@@ -1,3 +1,12 @@
 language: java
-jdk:
-  - openjdk7
+before_install: 
+  - sudo apt-get install subversion libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev
+  - "svn co http://svn.apache.org/repos/asf/thrift/tags/thrift-0.5.0 && cd thrift-0.5.0"
+  - "gem install rake"
+  - "rvm use 1.9.2"
+  - "ruby --version"
+  - "rake --version"
+  - "./bootstrap.sh"
+  - "./configure --disable-gen-erl --disable-gen-hs --without-ruby --without-haskell --without-erlang"
+  - "sudo make install"
+  - "cd .."
