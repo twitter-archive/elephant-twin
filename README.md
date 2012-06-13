@@ -1,4 +1,4 @@
-## elephant twin
+## elephant twin [![Build Status](https://secure.travis-ci.org/twitter/elephant-twin.png)](http://travis-ci.org/twitter/elephant-twin)
 Elephant Twin is a framework for creating indexes in Hadoop. 
 
 It provides a generic abstraction for how indexes get created and represented; specific implementations can create sparse or dense indexes, use a number of different on-disk formats (we provide examples of simple Lucene-based indexes, as well as Hadoop MapFiles; but anything else is possible -- using HBase for indexing comes to mind, for example).
